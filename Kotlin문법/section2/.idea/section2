@@ -1,0 +1,12 @@
+package chap02.section2
+
+fun main(){
+    val number = 10
+    val language = "Korean"
+    val secondNumber = "English"
+    language = "English"
+
+    println("number : $number")
+    println("language : $language")
+    println("secondNumber : $secondNumber")
+}
