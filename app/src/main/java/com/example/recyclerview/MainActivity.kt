@@ -3,6 +3,8 @@ package com.example.recyclerview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,10 +16,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         addDataArray()
 
+        //레이아웃 매니저와 어댑터 지정
+        rv_data_list.layoutManager = LinearLayoutManager(this)
+        rv_data_list.adapter= DataAdapter(dataArray,this)
 
-    }
 
-    private fun addDataArray(){
+        }
+
+        private fun addDataArray(){
         dataArray.add("오리")
         dataArray.add("호랑이")
         dataArray.add("여우")
@@ -28,4 +34,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 }
